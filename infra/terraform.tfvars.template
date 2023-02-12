@@ -1,0 +1,7 @@
+droplet_region            = "nyc1"                    # See available regions here: https://slugs.do-api.dev/ 
+droplet_size              = "s-1vcpu-512mb-10gb"      # The default (s-1vcpu-512mb-10gb) is the current cheapest droplet size. See droplet sizes here: https://slugs.do-api.dev/
+domain                    = "vaultwarden.example.com" # The domain of your vaultwarden instance - should equal the value of DOMAIN in /vw/.env
+personal_access_token     = "dop_v1_79example"        # Your Digital Ocean personal access token. Ensure it has write permissions (from README.md pre-requisite 2)
+ssh_key_digitalocean_name = "vaultwarden_terraform"   # The name of your ssh key on Digital Ocean (from README.md pre-requisite 3)
+droplet_backups_enabled   = true                      # (Optional) Enabled by default. If enabled, creates weekly backups of the vaultwarden server. Adds 20% to the cost of the droplet
+allowed_source_ips        = ["0.0.0.0/0", "::/0"]     # (Optional) By default the server allows requests from all IPs. Change this setting if you want the server to be accessible from only certain IPs. The value should be an array of strings containing IPv4 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs 

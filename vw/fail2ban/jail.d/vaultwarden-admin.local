@@ -1,0 +1,7 @@
+[vaultwarden-admin]
+enabled = true
+port = 80,443
+filter = vaultwarden-admin
+banaction = %(banaction_allports)s
+logpath = /vw-data/vaultwarden.log
+action = iptables-allports[name=vaultwarden-admin, chain=FORWARD]
